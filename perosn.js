@@ -1,6 +1,6 @@
 function Person() {
   this.pos = createVector(50, 250);
-  this.vel = createVector(1, 0);
+  this.vel = createVector(3, 0);
   this.acc = createVector(0, 0);
   this.mass = 10;
   this.applyForce = function(force) {
@@ -12,9 +12,13 @@ function Person() {
     this.acc.set(0, 0);
   }
   this.display = function() {
-    fill(255, 150);
+    fill(255,150);
     stroke(255);
-    rect(this.pos.x, this.pos.y, this.mass*10, this.mass*10);
+    rect(this.pos.x, this.pos.y+59, this.mass*5, this.mass*5);
+    fill(0,0,0)
+    ellipse(this.pos.x+13,this.pos.y+80,15,15);
+    ellipse(this.pos.x+35,this.pos.y+80,15,15);
+ 
   }
   this.edges = function() {
     if (this.pos.y > 250) {
