@@ -1,22 +1,3 @@
-
-var person;
-
-var sceneNum=0
-
-
-function setup() {
-  createCanvas(640, 360);
-  person = new Person();
-}
-
-function keyPressed(){
-  if (key == ' '){
-    var jump = createVector(0,-15);
-    person.applyForce(jump);
-  } else if (key=='q'){
-    sceneNum++;
-  }
-  
 }
 
 function draw() {
@@ -39,7 +20,7 @@ function draw() {
     background(200,200,200)
     
     
-  background(51);
+  background(55, 227, 239);
   translate(-person.pos.x,0);
   var gravity = createVector(0,0.5);
   person.applyForce(gravity);
@@ -48,7 +29,7 @@ function draw() {
   var force = createVector(-0.1,0);
   person.applyForce(force);
   }
-  translate(-person.pos.x,0);
+  
     person.update();
   person.edges();
     person.display();
@@ -58,10 +39,12 @@ function draw() {
     rect(900,height-70, 30, 90);
     rect(1150,height-20,60, 50);
     rect(1300,height+50,70,50);
+    rect(1600, height-50, 30, 50);
+    rect(1750,height-50, 40, 60);
   }else{
-      background(20,20,20);
+      background(66, 226, 244);
     textSize(50);
-      fill(100,200,100);
+      fill(00,00,00);
       text("Mission Complete!!",100,100)
     textSize(25)
     text("☺Thanks for playing☺",150,200)
