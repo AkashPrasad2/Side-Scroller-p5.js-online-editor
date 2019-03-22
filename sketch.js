@@ -1,5 +1,4 @@
 
-
 var person;
 
 var sceneNum=0
@@ -24,15 +23,15 @@ function draw() {
   
   if (sceneNum===0) {
     background(37,209,160);
-  textSize(30);
+  textSize(40);
 	fill(0,0,0);
-	text("The adventures of Mr.Cube",150,100)
+	text("The Adventures of Mr.Cube",75,100)
     textSize(20);
 	fill(0,0,100);
     text("How to play:", 350, 200)
-    text("Avoid obstacles")
-    text("Press 'space bar' to jump",350, 230)
-    	text("Press 'Q' to begin",350,260)
+    text("Avoid obstacles",350,230)
+    text("Press 'space bar' to jump",350, 260)
+    	text("Press 'Q' to begin",350,290)
     
     
   }
@@ -49,17 +48,22 @@ function draw() {
   var force = createVector(-0.1,0);
   person.applyForce(force);
   }
-  //translate(-person.pos.x,0);
+  translate(-person.pos.x,0);
     person.update();
   person.edges();
     person.display();
   fill(0,0,100);
   rect(400, height-50,30,50);
     rect(700, height-50,30,50);
-    rect(900,height-70, 30, 900);
+    rect(900,height-70, 30, 90);
+    rect(1150,height-20,60, 50);
+    rect(1300,height+50,70,50);
   }else{
       background(20,20,20);
+    textSize(50);
       fill(100,200,100);
-      text("Game over",100,100)
+      text("Mission Complete!!",100,100)
+    textSize(25)
+    text("☺Thanks for playing☺",150,200)
     }
 }
