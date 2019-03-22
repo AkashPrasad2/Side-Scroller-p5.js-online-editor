@@ -1,5 +1,12 @@
 ##Changes made
 
-1.changed the color of the person, obstacles, and background
+1.changed the color of the person, obstacles, and background(in game)
 2.Added instructions of how to play the game and instructions
-3.
+3.added and postgame screen with different colors and text saying congrats
+4.added a face to the person(mr.cube) by making ellipses with the varriables and add or subract to be on the face and so they would move along with the face.
+5.added several different objects varrying in size
+6.adjusted the gravity and jump forces so that it made it a more satisfying and quick jump
+7.changed the velocity to make the jump more possible to make and to make the game more fast paced and fun.
+8.changed th size of the person so it would look more appropriate ot the obstacles
+9.changed the point of reference for the ground so that it would not be hovering above the bottom but acctually be on the bottom of the screen.
+10.Changed the color and text size/location of the scenes at the behining and end.
