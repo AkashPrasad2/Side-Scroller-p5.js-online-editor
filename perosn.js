@@ -26,4 +26,4 @@ function Person() {
       this.pos.y = 250;
     }
   }
-}
+} 
