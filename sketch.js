@@ -1,18 +1,38 @@
+
+var person;
+
+var sceneNum=0
+
+
+function setup() {
+  createCanvas(640, 360);
+  person = new Person();
+}
+
+function keyPressed(){
+  if (key == ' '){
+    person.jumpCount++
+    var jump = createVector(0,-15);
+    person.applyForce(jump);
+  } else if (key=='q'){
+    sceneNum++;
+  }
+  
 }
 
 function draw() {
   
   if (sceneNum===0) {
-    background(37,209,160);
+    background(63, 226, 27);
   textSize(40);
-	fill(0,0,0);
-	text("The Adventures of Mr.Cube",75,100)
+	fill(250,0,0);
+	text("The Adventures of Mr.Cube",50,100)
     textSize(20);
 	fill(0,0,100);
-    text("How to play:", 350, 200)
-    text("Avoid obstacles",350,230)
-    text("Press 'space bar' to jump",350, 260)
-    	text("Press 'Q' to begin",350,290)
+    text("How to play:", 300, 200)
+    text("Avoid obstacles",300,230)
+    text("Press 'space bar' to jump",300, 260)
+    	text("Press 'Q' to begin",300,290)
     
     
   }
@@ -20,7 +40,7 @@ function draw() {
     background(200,200,200)
     
     
-  background(55, 227, 239);
+  background(64, 219, 249);
   translate(-person.pos.x,0);
   var gravity = createVector(0,0.5);
   person.applyForce(gravity);
@@ -41,6 +61,9 @@ function draw() {
     rect(1300,height+50,70,50);
     rect(1600, height-50, 30, 50);
     rect(1750,height-50, 40, 60);
+    rect(1950,height-80,40,90);
+    ellipse(2200,height-30,30,50);
+    rect(2400,height-120,50,120);
   }else{
       background(66, 226, 244);
     textSize(50);
