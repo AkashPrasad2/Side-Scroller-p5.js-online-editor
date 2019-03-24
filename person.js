@@ -4,6 +4,7 @@ function Person() {
   this.acc = createVector(0, 0);
   this.mass = 10;
   this.jumpCount =0;
+  this.lifeCount=3;
   this.applyForce = function(force) {
     this.acc.add(force);
   }
@@ -16,11 +17,13 @@ function Person() {
     fill(239, 130, 71);
     stroke(255);
     rect(this.pos.x, this.pos.y+59, this.mass*5, this.mass*5);
-    fill(0,0,0)
+    fill(0,0,0);
     ellipse(this.pos.x+13,this.pos.y+80,15,15);
     ellipse(this.pos.x+35,this.pos.y+80,15,15);
     //displayjumpCount
-    text("jump count:"+this.jumpCount, 200+this.pos.x,50);
+    fill(71, 7, 234)
+    text("jump count:"+this.jumpCount, 350+this.pos.x,50);
+    text("♥♥♥ "+this.lifeCount, 100+this.pos.x,50);
  
   }
   this.edges = function() {
